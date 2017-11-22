@@ -1,4 +1,4 @@
-/* reflow.js v0.4.2 - 2017 (c) Luca Morricone <morricone.luca@outlook.com> - MIT License */
+/* reflow.js v0.4.3 - 2017 (c) Luca Morricone <morricone.luca@outlook.com> - MIT License */
 
 ( function ( w, d ) {
   /*
@@ -58,7 +58,7 @@
   }
 
   var ready = setInterval( function () {
-    if ( d.head ) {
+    if ( d.body ) {
       clearInterval( ready );
       reflow();
       var e = 0;
