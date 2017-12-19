@@ -1,4 +1,4 @@
-/* reflow.js v0.5.1 - 2017 (c) Luca Morricone <morricone.luca@outlook.com> - MIT License */
+/* reflow.js v0.5.2 - 2017 (c) Luca Morricone <morricone.luca@outlook.com> - MIT License */
 
 ( function ( w, d ) {
   /*
@@ -60,12 +60,8 @@
   d.addEventListener( 'readystatechange', function ready() {
     //console.log( 'Reflow is ready on:' , d.readyState ); //Only for testing.
     reflow();
-    var e = 0;
     w.addEventListener( 'resize', function () {
-      if ( !( e++ ) ) setTimeout( function () {
-        e = 0;
-        reflow();
-      }, 500 );
+      requestAnimationFrame( reflow );
     } );
     d.removeEventListener( 'readystatechange', ready );
   } );
