@@ -1,4 +1,4 @@
-/* reflow.js v0.5.2 - 2017 (c) Luca Morricone <morricone.luca@outlook.com> - MIT License */
+/* reflow.js v0.5.3 - 2018 (c) Luca Morricone <morricone.luca@outlook.com> - MIT License */
 
 ( function ( w, d ) {
   /*
@@ -10,7 +10,7 @@
 
   /* //This is the function to generate the readability scale.
   var readability = ( function () {
-    var R = 40, //The Readability factor: approximately equal to the number of characters per line on a small mobile device with portrait orientation. ( Change this value to personalize fonts size ).
+    var R = 40.96, //The Readability factor: approximately equal to the number of characters per line on a small mobile device with portrait orientation. ( Change this value to personalize fonts size ).
     G = 1.25, //The Growth factor ( the same used in stylesheet ).
     cpl = []; //Initialize an array with Characters Per Line.
     for ( var i = 0; i < 7; i++ ) {
@@ -21,7 +21,7 @@
 
   var html = d.documentElement;
 
-  var readability = [40, 50, 62.5, 78.125, 97.65625, 122.070313, 152.587891];
+  var readability = [40.96, 51.2, 64, 80, 100, 125, 156.25];
 
   var breakpoint = {
     P: [ 552, 744, 962 ], //Breakpoints for Portrait device.
